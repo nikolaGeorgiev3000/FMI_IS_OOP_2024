@@ -1,5 +1,6 @@
 # Custom Folders
-
+*.dSYM
+``
 # Custom files
 .DS_Store
 
