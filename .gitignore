@@ -1,6 +1,4 @@
 # Custom Folders
-.idea
-cmake-build-debug
 
 # Custom files
 .DS_Store
