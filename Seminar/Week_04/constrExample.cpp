@@ -33,7 +33,7 @@ public:
     }
 };
 
-class Entity
+class DynMemEx
 {
 private:
     Entity1 e1;
