@@ -18,27 +18,27 @@ class DynamicSet
 public:
     // Ctors, Dtor
     DynamicSet();
-    DynamicSet(const char *name, unsigned a, unsigned b, unsigned *numbers, size_t size);
-    DynamicSet(const DynamicSet &other);
-    DynamicSet &operator=(const DynamicSet &other);
+    DynamicSet(const char *, unsigned, unsigned, unsigned *, size_t);
+    DynamicSet(const DynamicSet &);
+    DynamicSet &operator=(const DynamicSet &);
     ~DynamicSet();
 
     // Getters / Setters
     const char *getName() const;
     unsigned getElementsCount() const;
-    void setName(const char *name);
+    void setName(const char *);
 
     // Others
-    void invert(unsigned num);
+    void invert(unsigned);
     void clearElements();
     void print() const;
 
-    bool isSubsetOf(const DynamicSet &other) const;
-    bool contains(unsigned num) const;
+    bool isSubsetOf(const DynamicSet &) const;
+    bool contains(unsigned) const;
 
     // Union & Intersection of sets
-    DynamicSet unionOfSets(const DynamicSet &rhs) const; // Doesn't modify `this` object
-    DynamicSet intersectionOfSets(const DynamicSet &rhs) const;
+    DynamicSet unionOfSets(const DynamicSet &) const; // Doesn't modify `this` object
+    DynamicSet intersectionOfSets(const DynamicSet &) const;
 
 private:
     // Member-data
@@ -50,9 +50,9 @@ private:
     unsigned end;   // b
 
     // Private methods
-    void copyFrom(const DynamicSet &other);
+    void copyFrom(const DynamicSet &);
     void free();
 
-    unsigned getBucketIndex(unsigned num) const;
-    bool isInInterval(unsigned num) const;
+    unsigned getBucketIndex(unsigned) const;
+    bool isInInterval(unsigned) const;
 };
